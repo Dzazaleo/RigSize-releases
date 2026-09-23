@@ -1,0 +1,101 @@
+RigSize Licence
+
+Copyright (c) 2026 Leonardo Cunha. All rights reserved.
+
+RigSize (the "Software") is free to use. It is not open source. This licence
+explains what you may and may not do with it. By installing or using the
+Software, you agree to these terms.
+
+
+1. WHAT YOU MAY DO
+
+You may download, install, and use the Software free of charge, on as many
+computers as you like, for personal or commercial work. This includes using
+it on paid projects, in a studio, or for clients.
+
+
+2. YOUR FILES STAY YOURS
+
+Everything you open with the Software, and everything it produces from your
+work (resized images, atlas files, skeleton files, project files), belongs to
+you or to whoever owns the original work. This licence gives the copyright
+holder no rights over your files.
+
+
+3. WHAT YOU MAY NOT DO
+
+You may not:
+
+  a. sell, rent, or charge anyone for the Software, or bundle it into anything
+     you sell;
+  b. share copies of the Software or its installers with others, or host them
+     for download anywhere. Point people to the official download page instead,
+     so they get the genuine version and its updates:
+     https://github.com/Dzazaleo/RigSize-releases/releases
+  c. change, translate, or build other software from the Software;
+  d. reverse engineer, decompile, or take apart the Software, except where the
+     law where you live allows this regardless of what a licence says;
+  e. remove or change any copyright notice, credit, or licence text in the
+     Software.
+
+
+4. OWNERSHIP
+
+The Software, including its code, design, and documentation, belongs to the
+copyright holder. This licence lets you use it. It does not sell or transfer it
+to you.
+
+
+5. UPDATES AND FUTURE VERSIONS
+
+The Software may check for updates online and offer to install them. The
+copyright holder may change, stop, or withdraw the Software at any time.
+Future versions may come with different terms. A version you already have
+stays under the licence it came with.
+
+
+6. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EITHER
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES THAT IT WILL WORK
+CORRECTLY, THAT IT IS FIT FOR ANY PARTICULAR PURPOSE, OR THAT IT DOES NOT
+INFRINGE ANYONE'S RIGHTS.
+
+
+7. LIMIT OF LIABILITY
+
+TO THE FULLEST EXTENT THE LAW ALLOWS, THE COPYRIGHT HOLDER IS NOT LIABLE FOR
+ANY CLAIM, DAMAGE, OR LOSS OF ANY KIND ARISING FROM THE SOFTWARE OR ITS USE.
+THIS INCLUDES DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGE,
+LOSS OF DATA, LOSS OF PROFIT, AND BUSINESS INTERRUPTION, WHETHER THE CLAIM IS
+BASED ON CONTRACT, NEGLIGENCE, OR ANYTHING ELSE.
+
+
+8. BACK UP YOUR WORK
+
+The Software reads, resizes, and writes image files, atlas files, skeleton
+files, and project files, and it can overwrite existing files in the folder
+you choose for its output. Keep your own backups of any artwork or project you
+use it on. The copyright holder is not responsible for lost, changed, or
+overwritten files.
+
+
+9. SPINE AND OTHER THIRD-PARTY PARTS
+
+The Software includes parts made by others, each under its own licence. Those
+licences are listed in THIRD-PARTY-LICENSES.txt, which comes with the Software,
+and they are not changed by this licence.
+
+The Software reads and writes files made with Spine and includes the Spine
+Runtimes by Esoteric Software LLC, which are licensed separately under the
+Spine Runtimes License Agreement. To use the Software you need your own valid
+Spine licence from Esoteric Software. The Software is not made by, endorsed by,
+or connected to Esoteric Software LLC. "Spine" is their trademark and is used
+here only to say that the Software works with Spine files.
+
+
+10. ENDING THIS LICENCE
+
+This licence ends automatically if you break any of its terms. If it ends, you
+must stop using the Software and delete all copies you have. Sections 4, 6, 7,
+8, and 9 still apply after it ends.

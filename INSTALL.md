@@ -1,75 +1,120 @@
 # Installing RigSize
 
-Pre-built installers are published to GitHub Releases for each tagged version. This guide walks through download → install → first-launch on macOS and Windows. No `git`, Node.js, or developer tooling required.
+RigSize is free to use. Installers for Windows and macOS are on the download page for each version. This guide walks you through downloading, installing and opening the app for the first time. You do not need any developer tools.
 
-> **Latest release:** [github.com/Dzazaleo/RigSize-releases/releases](https://github.com/Dzazaleo/RigSize-releases/releases)
+> **Download page:** [github.com/Dzazaleo/RigSize-releases/releases](https://github.com/Dzazaleo/RigSize-releases/releases)
 >
-> Pick the asset that matches your OS:
+> Pick the file for your computer:
 >
-> - macOS (Apple Silicon): `RigSize-<version>-arm64.dmg`
 > - Windows (64-bit): `RigSize-<version>-x64.exe`
+> - macOS (Apple Silicon): `RigSize-<version>-arm64.dmg`
+>
+> RigSize works with files made in Spine, so you need your own Spine licence from Esoteric Software.
+
+---
+
+## Windows
+
+**Note:** RigSize does not carry a Microsoft-recognised publisher certificate, so Windows shows a warning the first time you run the installer. Getting past it takes two clicks, and then the installer has three short pages. The installation is just for your user account: **you do not need administrator rights, and Windows will not ask for an administrator password**.
+
+### Installing, step by step
+
+1. **"Windows protected your PC".** Download `RigSize-<version>-x64.exe` from the download page and double-click it. Windows shows a blue window titled **Windows protected your PC**:
+
+   _"Microsoft Defender SmartScreen prevented an unrecognised app from starting. Running this app might put your PC at risk."_
+
+   ![Step 1: the “Windows protected your PC” window. It does not name the app. The only button is Don't run, and the way forward is the small More info link.](docs/install-images/windows-smartscreen-more-info.png)
+
+   This window does **not** name the app. The only button is **Don't run**. To continue, click the small **More info** link.
+
+   _Spelling note:_ the picture comes from a computer set to UK English, which writes _unrecognised_. On US English you will see _unrecognized_. It is the same window.
+
+2. **Run anyway.** After you click **More info**, two lines appear: `Application: RigSize-<version>-x64.exe` and `Publisher: Unknown publisher`, and a **Run anyway** button appears next to **Don't run**.
+
+   ![Step 2: the expanded window naming the file and showing Publisher: Unknown publisher, with Run anyway and Don't run buttons.](docs/install-images/windows-smartscreen-run-anyway.png)
+
+   **Publisher: Unknown publisher** is expected, because RigSize has no publisher certificate. Check that the `Application:` line shows the file you downloaded, then click **Run anyway**.
+
+3. **Installation options.** The **RigSize Setup** window opens on **Choose Installation Options**. _Only for me_ is already selected, and the line below it reads _Fresh install for current user only._ Leave it as it is and click **Next >**.
+
+   ![Step 3: RigSize Setup, Choose Installation Options, with “Only for me” selected and the line “Fresh install for current user only.”](docs/install-images/windows-install-options.png)
+
+4. **Install location.** The **Choose Install Location** page suggests `C:\Users\<you>\AppData\Local\Programs\RigSize`. Leave it as it is and click **Install**.
+
+   ![Step 4: Choose Install Location, suggesting the AppData\Local\Programs\RigSize folder for your user account.](docs/install-images/windows-install-location.png)
+
+5. **Finished.** The **Completing RigSize Setup** page says _RigSize has been installed on your computer._ The **Run RigSize** box is ticked. Click **Finish**.
+
+   ![Step 5: Completing RigSize Setup, with the Run RigSize box ticked.](docs/install-images/windows-install-complete.png)
+
+After this, open RigSize from the Start menu (search for "RigSize"), or from the desktop shortcut if the installer made one.
+
+### If something goes wrong
+
+- **Nothing happens after Run anyway**: the download may be incomplete. Check that the file size matches the one on the download page, and download it again if it does not.
+- **Your antivirus blocks the installer**: some antivirus programs flag installers that have no publisher certificate. Allow the file in your antivirus settings, or ask your IT department if your computer is managed by your company.
 
 ---
 
 ## macOS
 
-**Note:** This build is signed ad-hoc, not with an Apple Developer ID. The first launch triggers Gatekeeper, and the flow is longer than you might expect — **four stages**, ending in an administrator authentication. It is one-time per binary: afterwards the app opens normally from Applications, Launchpad, or Spotlight.
+**Note:** RigSize is not registered with Apple, so the first time you open it, macOS warns you and asks you to confirm. This takes **four steps**, and the last one asks for an administrator's password. You only do this once: after that, the app opens normally from Applications, Launchpad or Spotlight.
 
 > ⚠️ **Two things to know before you start:**
 >
-> 1. At stages 1 and 3 below, the blue default button is **Move to Trash** — it deletes the app. Pressing Return twice out of habit deletes your download. Read each dialog before confirming.
-> 2. Stage 4 asks for **an administrator's** Touch ID or password — not just any account's. If you use a standard (non-administrator) account, you cannot complete the first launch on your own; someone with an administrator account on that Mac must enter their credentials. Windows has no equivalent requirement — see the Windows section.
+> 1. In steps 1 and 3 below, the highlighted button is **Move to Trash**, which deletes the app. If you press Return out of habit, your download is gone. Read each window before you click.
+> 2. Step 4 needs **an administrator's** Touch ID or password. If your account on this Mac is not an administrator, someone who has an administrator account must type their password for you. Windows does not need this (see the Windows section).
 
 ### Install
 
-1. Download `RigSize-<version>-arm64.dmg` from the Releases page.
-2. Double-click the downloaded `.dmg`. macOS mounts the disk image and shows a Finder window with the app icon next to an Applications folder shortcut.
+1. Download `RigSize-<version>-arm64.dmg` from the download page.
+2. Double-click the downloaded `.dmg` file. A Finder window opens with the RigSize icon next to a shortcut to your Applications folder.
 3. Drag **RigSize.app** into **Applications**.
 
-### First launch — the four stages (macOS 15 Sequoia and later)
+### Opening it the first time (macOS 15 Sequoia and later)
 
-1. **The block dialog.** Open **Applications** in Finder and double-click **RigSize**. macOS shows a dialog titled _“RigSize.app” Not Opened_:
+1. **The "Not Opened" window.** Open **Applications** in Finder and double-click **RigSize**. macOS shows a window titled _“RigSize.app” Not Opened_:
 
    _“Apple could not verify ‘RigSize.app’ is free of malware that may harm your Mac or compromise your privacy.”_
 
-   ![Stage 1 — the “RigSize.app” Not Opened dialog. Its only buttons are Move to Trash (blue, default) and Done — there is no button that opens the app.](docs/install-images/macos-gatekeeper-blocked.png)
+   ![Step 1: the “RigSize.app” Not Opened window. Its only buttons are Move to Trash (highlighted) and Done. Neither one opens the app.](docs/install-images/macos-gatekeeper-blocked.png)
 
-   The only buttons are **Move to Trash** (blue, default) and **Done**. There is **no Open button**, and nothing in this dialog tells you where to go next — the only way forward is System Settings, and the dialog does not say so. Click **Done**. Do **not** press Return: **Move to Trash** is the default button here, and it deletes the app.
+   The only buttons are **Move to Trash** (highlighted) and **Done**. There is **no Open button**, and the window does not tell you what to do next. Click **Done**. Do **not** press Return, because that clicks **Move to Trash** and deletes the app.
 
-2. **System Settings.** Open **System Settings → Privacy & Security** and scroll down to the **Security** section near the bottom of the pane. This is not a dialog — you have to know to come here. You'll see a row reading:
+2. **System Settings.** Open **System Settings**, go to **Privacy & Security**, and scroll down to the **Security** section near the bottom. You will see a line that says:
 
    _“RigSize.app” was blocked to protect your Mac._
 
-   ![Stage 2 — the Security section of System Settings ▸ Privacy & Security, showing the “RigSize.app” was blocked row with its Open Anyway button.](docs/install-images/macos-gatekeeper-open-anyway.png)
+   ![Step 2: the Security section of System Settings, Privacy & Security, showing the “RigSize.app” was blocked line and its Open Anyway button.](docs/install-images/macos-gatekeeper-open-anyway.png)
 
    Click **Open Anyway** next to it.
 
-3. **The confirmation dialog.** A dialog titled _Open “RigSize.app”?_ appears. Its buttons, top to bottom, are **Move to Trash** (blue, default) · **Open Anyway** · **Done**. There is **no Open button** — the button that proceeds is **Open Anyway**, the *middle* one. The destructive **Move to Trash** is the default again, so pressing Return here deletes the app.
+3. **The confirmation window.** A window titled _Open “RigSize.app”?_ appears. Its buttons, from top to bottom, are **Move to Trash** (highlighted), **Open Anyway** and **Done**. The one you want is **Open Anyway**, in the middle. Pressing Return would click **Move to Trash** and delete the app.
 
-   ![Stage 3 — the Open “RigSize.app”? confirmation dialog. The three buttons are Move to Trash (blue, default), Open Anyway, and Done — the safe action is the middle button.](docs/install-images/macos-gatekeeper-confirm-open.png)
+   ![Step 3: the Open “RigSize.app”? window. The buttons are Move to Trash (highlighted), Open Anyway and Done. The safe choice is the middle button.](docs/install-images/macos-gatekeeper-confirm-open.png)
 
    Click **Open Anyway** (the middle button).
 
-4. **Administrator authentication.** A **Privacy & Security** prompt appears asking for **an administrator's Touch ID or an administrator's password**, with buttons **Use Password…** (blue, default) · **Cancel**. This is the stage that actually launches the app — clicking Open Anyway at stage 3 does not open it by itself. A standard (non-administrator) account cannot complete this step.
+4. **Administrator password.** A **Privacy & Security** window asks for **an administrator's Touch ID or password**, with the buttons **Use Password…** (highlighted) and **Cancel**. This is the step that actually opens the app: clicking Open Anyway in step 3 does not open it on its own.
 
-   ![Stage 4 — the Privacy & Security administrator authentication prompt, with Use Password… (blue, default) and Cancel. This step is what actually opens the app.](docs/install-images/macos-gatekeeper-admin-auth.png)
+   ![Step 4: the Privacy & Security window asking for an administrator's Touch ID or password, with Use Password… (highlighted) and Cancel. This step is what actually opens the app.](docs/install-images/macos-gatekeeper-admin-auth.png)
 
-   Authenticate with an administrator's Touch ID or password. The app launches.
+   Use an administrator's Touch ID or password. RigSize opens.
 
-Future launches work normally — double-click from Applications, Spotlight (`Cmd+Space` → type "RigSize"), or Launchpad. The Gatekeeper bypass is one-time per binary.
+From now on, RigSize opens normally: double-click it in Applications, find it with Spotlight (`Cmd+Space`, then type "RigSize"), or use Launchpad. You will need to repeat these steps once for each new version you install.
 
 ### Older macOS versions (14 Sonoma and earlier)
 
-The right-click bypass path may still work as a one-step alternative on macOS 14 and earlier:
+On macOS 14 and earlier there is often a shorter way:
 
-1. **Right-click** (or Control-click) the app icon in Applications. Choose **Open** from the context menu.
-2. macOS shows: _"App cannot be opened because the developer cannot be verified."_ Click **Open Anyway** (or **Open**, depending on the exact macOS version).
+1. **Right-click** (or Control-click) the RigSize icon in Applications and choose **Open**.
+2. macOS says the developer cannot be verified. Click **Open Anyway** (or **Open**, depending on your macOS version).
 
-If the right-click path doesn't show an "Open Anyway" option, fall back to the System Settings flow above (it works on every macOS version that supports the app). On macOS 15 and later the right-click path no longer offers an Open option at all — use the four-stage flow.
+If you do not see an Open Anyway option, use the System Settings steps above instead. They work on every macOS version RigSize supports. On macOS 15 and later, right-clicking no longer offers an Open option, so use the four steps.
 
-### Troubleshooting
+### If something goes wrong
 
-- **"App is damaged and can't be opened"**: the macOS quarantine attribute is sometimes set on downloaded files in unexpected ways. In Terminal, clear quarantine and re-attempt the first launch:
+- **"RigSize is damaged and can't be opened"**: macOS sometimes marks downloaded apps in a way that triggers this message. Open Terminal, paste the line below, press Return, then try opening RigSize again:
 
   ```bash
   xattr -cr "/Applications/RigSize.app"
@@ -77,67 +122,18 @@ If the right-click path doesn't show an "Open Anyway" option, fall back to the S
 
 ---
 
-## Windows
+## Updates
 
-**Note:** This build is unsigned (no code-signing certificate). The first run triggers Microsoft Defender SmartScreen — two dialog stages — followed by three installer pages. The install is per-user: **no administrator rights are required and no User Account Control prompt appears at any point**. This is the opposite of macOS, where stage 4 demands an administrator's credentials. (That statement covers installation; first launch is a separate step.)
+When RigSize starts, it quietly checks whether a newer version exists, and only shows you a message if there is one. You can also check yourself with **Help → Check for Updates**.
 
-### Install and first run — the five stages
-
-1. **SmartScreen blocks the download.** Download `RigSize-<version>-x64.exe` from the Releases page and double-click it. Windows shows a dialog titled **Windows protected your PC**:
-
-   _"Microsoft Defender SmartScreen prevented an unrecognised app from starting. Running this app might put your PC at risk."_
-
-   ![Stage 1 — the SmartScreen “Windows protected your PC” dialog. The app is not named; the only button is Don't run, and the way forward is the small More info link.](docs/install-images/windows-smartscreen-more-info.png)
-
-   The app is **not named** at this stage — the dialog says only that "an unrecognised app" was blocked, with no indication of which one. The sole button is **Don't run**; the way forward is the small **More info** link.
-
-   _Spelling note:_ the screenshot was taken on a UK-English system, which renders _unrecognised_; a US-English system renders _unrecognized_. Same dialog either way.
-
-2. **The identity panel.** Click **More info**. The link is replaced in place by two identity lines — `Application: RigSize-<version>-x64.exe` and `Publisher: Unknown publisher` — plus a **Run anyway** button next to **Don't run**.
-
-   ![Stage 2 — the expanded SmartScreen dialog naming the file and showing Publisher: Unknown publisher, with Run anyway and Don't run buttons.](docs/install-images/windows-smartscreen-run-anyway.png)
-
-   **Publisher: Unknown publisher** is what you should expect to see: the product is not code-signed, so Windows has no publisher name to show. Confirm the `Application:` line names the file you downloaded, then click **Run anyway**.
-
-3. **Installation options.** The **RigSize Setup** installer opens on **Choose Installation Options**. _Only for me_ is selected by default, and the status line reads _Fresh install for current user only._ Keep the default and click **Next >**.
-
-   ![Stage 3 — RigSize Setup, Choose Installation Options, with “Only for me” selected by default and the status line “Fresh install for current user only.”](docs/install-images/windows-install-options.png)
-
-4. **Install location.** The **Choose Install Location** page proposes `C:\Users\<you>\AppData\Local\Programs\RigSize`. That is a new folder of its own — next to, not replacing, any older `Spine Texture Manager` folder you may have. Keep the default and click **Install**.
-
-   ![Stage 4 — Choose Install Location, defaulting to the per-user AppData\Local\Programs\RigSize folder — a new directory beside the old app's, not a replacement.](docs/install-images/windows-install-location.png)
-
-5. **Completion.** The **Completing RigSize Setup** page reads _RigSize has been installed on your computer._ The **Run RigSize** checkbox is checked by default. Click **Finish**.
-
-   ![Stage 5 — Completing RigSize Setup, with the Run RigSize checkbox checked by default.](docs/install-images/windows-install-complete.png)
-
-Afterwards, launch from the Start Menu (search "RigSize") or the Desktop shortcut if the installer offered one.
-
-### Troubleshooting
-
-- **The `.exe` doesn't open after Run anyway**: confirm the file is fully downloaded (size matches the GitHub Releases asset listing). If the file is truncated, redownload.
-- **Antivirus quarantines the installer**: Windows Defender occasionally flags unsigned NSIS installers. Whitelist the `.exe` in your AV's quarantine list, or contact your IT department if you are on a managed machine.
+The message has a button that opens the download page. Download the new installer and run it the same way as the first time. On macOS, the warning steps above appear once more for the new version.
 
 ---
 
-## Coming from Spine Texture Manager 1.x
+## Reporting problems
 
-RigSize 2.0.0 installs **alongside** Spine Texture Manager 1.9.4 — on Windows into its own `RigSize` folder next to the old app's folder, and on macOS as `RigSize.app` next to `Spine Texture Manager.app` in Applications. The old version keeps working and keeps its own settings. Preferences and the Open Recent list do **not** carry over to 2.0.0 — it starts with a clean slate.
+Found a bug? Open an issue at [github.com/Dzazaleo/RigSize-releases/issues](https://github.com/Dzazaleo/RigSize-releases/issues) and include:
 
----
-
-## After installation: auto-update
-
-Once installed, the app checks GitHub Releases for newer versions on startup (silently — only shows a prompt if an update is available). You can also check manually via **Help → Check for Updates**.
-
-On macOS and Windows, the app shows a non-blocking notice with a button to open the Releases page — download the new installer manually and run it (re-triggering the first-launch Gatekeeper / SmartScreen step).
-
----
-
-## Reporting issues
-
-Found a bug? Open an issue at [github.com/Dzazaleo/RigSize-releases/issues](https://github.com/Dzazaleo/RigSize-releases/issues). Include:
-
-- Your OS + version (e.g. macOS 14.4, Windows 11 23H2, Ubuntu 24.04).
-- The app version (the file name of the installer you ran, or check **Help → About** if available).
-- Steps to reproduce + the output you expected vs got.
+- Your system and version (for example macOS 15.4 or Windows 11 24H2).
+- The RigSize version (shown in **About RigSize**, or in the name of the installer you ran).
+- What you did, what you expected to happen, and what happened instead.
