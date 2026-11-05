@@ -53,6 +53,16 @@ After this, open RigSize from the Start menu (search for "RigSize"), or from the
 
 - **Nothing happens after Run anyway**: the download may be incomplete. Check that the file size matches the one on the download page, and download it again if it does not.
 - **Your antivirus blocks the installer**: some antivirus programs flag installers that have no publisher certificate. Allow the file in your antivirus settings, or ask your IT department if your computer is managed by your company.
+- **Windows says Smart App Control blocked the app**: this is a Windows 11 security feature, and the window has no **Run anyway** button. It can also say that part of the app was blocked. Windows does not let you allow just one app, so the only way to run RigSize on this computer is to turn the feature off:
+  1. Open the Start menu, search for **Smart App Control** and open it.
+  2. Choose **Off**.
+  3. Run the installer again.
+
+  Before you do this, keep in mind:
+  - It lowers protection for every app, not just RigSize, so if you are not comfortable with that, do not turn it off.
+  - It has to stay off, or Windows will block RigSize again.
+  - On older versions of Windows 11, turning it back on means resetting or reinstalling Windows. To see your version, search for `winver` in the Start menu. Recent versions (build 26100.8116 or 26200.8116 and later) can turn it back on from the same screen.
+  - If your computer is managed by your company, ask your IT department first.
 
 ---
 
