@@ -31,8 +31,6 @@ Spine licence from Esoteric Software.
 - **Licence:** RigSize is free to use, including for commercial work. See
   [LICENSE](LICENSE) for the full terms.
 
-
-
 ## FAQ
 
 ### Does it only check the setup pose, or the whole animation?
@@ -77,4 +75,3 @@ pixels.
 
 Open them together as a group project. RigSize sizes each shared image for all
 of the skeletons and exports them to one images folder.
-
