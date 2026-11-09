@@ -61,9 +61,12 @@ No. Open your skeleton JSON with its atlas, or with a folder of loose images.
 
 ### Do I have to change how I pack?
 
-No. RigSize exports a folder of right-sized images and the skeleton JSON. You
-then pack them with Spine's Texture Packer or the packer in your engine. Your
-source files are never changed.
+No. RigSize exports a folder of right-sized images and the skeleton JSON, and
+you can still pack them yourself with Spine's Texture Packer or the packer in
+your engine. Or tick Pack with Spine in the Export window: RigSize then runs
+your own installed copy of Spine to pack the images into a Spine atlas, in the
+same export. Pack with Spine is new and still in beta. Your source files are
+never changed.
 
 ### How can I tell if the smaller images still look right?
 
@@ -75,3 +78,35 @@ pixels.
 
 Open them together as a group project. RigSize sizes each shared image for all
 of the skeletons and exports them to one images folder.
+
+### Can a group be packed into one atlas?
+
+Yes. With Pack with Spine ticked, a group can pack one atlas for the whole
+group, which is the default, or one atlas per skeleton. You choose under
+Atlases in the group's Pack settings.
+
+### What do I need for Pack with Spine?
+
+Spine must be installed on the same computer, and activated. RigSize uses the
+Spine version each skeleton was exported with. If that version is not
+installed, Spine downloads it the first time, so you need the internet then.
+To pack a group together, its skeletons must come from the same Spine version
+(for example all 4.2).
+
+### Does it run on an Intel Mac?
+
+Not yet. The Mac version runs on Macs with Apple silicon (M1 or newer). On
+Windows it needs a 64-bit PC.
+
+Using an Intel Mac and want RigSize on it?
+[Tell us here](https://github.com/Dzazaleo/RigSize-releases/issues/new?title=Intel%20Mac%20support).
+Each request helps us decide whether to make an Intel version.
+
+## Feedback
+
+Found a problem, or have an idea? Tell us on the
+[issues page](https://github.com/Dzazaleo/RigSize-releases/issues). If a rig
+packed with Spine looks wrong, please say so there too.
+
+RigSize is free. If it saves you time, a star on this page helps other
+animators and developers find it.

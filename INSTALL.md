@@ -9,6 +9,8 @@ RigSize is free to use. Installers for Windows and macOS are on the download pag
 > - Windows (64-bit): `RigSize-<version>-x64.exe`
 > - macOS (Apple Silicon): `RigSize-<version>-arm64.dmg`
 >
+> Macs with an Intel processor are not supported yet. Using one? [Let us know](https://github.com/Dzazaleo/RigSize-releases/issues/new?title=Intel%20Mac%20support).
+>
 > RigSize works with files made in Spine, so you need your own Spine licence from Esoteric Software.
 
 ---
