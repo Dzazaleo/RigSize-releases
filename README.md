@@ -25,7 +25,7 @@ RigSize works with skeleton exports from Spine 4.2 or newer. You need your own
 Spine licence from Esoteric Software.
 
 - **Download:** get the latest installer from the
-  [Releases page](https://github.com/Dzazaleo/RigSize-releases/releases).
+  [latest release](https://github.com/Dzazaleo/RigSize-releases/releases/latest).
 - **Install help:** [INSTALL.md](INSTALL.md) explains how to install RigSize
   and open it for the first time on macOS and Windows.
 - **Licence:** RigSize is free to use, including for commercial work. See
@@ -73,6 +73,17 @@ never changed.
 The Animation Viewer compares Original and Optimized with a toggle, a split
 slider or side by side. Compare them at 100% zoom, where you see the true
 pixels.
+
+### Why do soft edges look dark or black after export?
+
+Usually the images are stored with one kind of alpha (premultiplied or
+straight) and drawn with the other. Check that the premultiplied alpha setting
+in your game engine or viewer matches how the images were exported from Spine.
+With an atlas, RigSize reads this from the atlas and keeps it. Without an
+atlas, RigSize looks at the pixels and asks you how the images are stored when
+it cannot be sure: pick the answer that matches your Spine export. If the
+edges still look wrong, please tell us on the
+[issues page](https://github.com/Dzazaleo/RigSize-releases/issues).
 
 ### What if several skeletons share the same images?
 
